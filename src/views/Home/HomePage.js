@@ -1,8 +1,22 @@
 import React from 'react';
 import { Container, Image, Row, Col, Card, Button, Nav, Carousel } from 'react-bootstrap';
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Pagination} from 'swiper';
 import Typewriter from "typewriter-effect";
-import nature from '../../assets/vr.jpg'
-import './HomePage.css'
+import './HomePage.css';
+import "swiper/css";
+import "swiper/css/pagination";
+import nature from '../../assets/vr.jpg';
+import aws from '../../assets/homePage/AWS.jpeg';
+import gbv from "../../assets/homePage/gbv.jpeg";
+import shortlist from "../../assets/homePage/Shortlist.png";
+import picture8 from "../../assets/homePage/Picture8.jpeg";
+import nexus from "../../assets/homePage/Impact-nexus.png";
+import innovesta from "../../assets/homePage/Innovesta.png"
+
+
+SwiperCore.use([Pagination]);
+
 
 function HomePage() {
 
@@ -79,35 +93,53 @@ function HomePage() {
                     </Card>
                 </Col>
             </Row>
+            <br/>
 
             <Row className="justify-content-md-center">
-                <Col xs={3}>
-                    <Carousel>
-                        <Carousel.Item>
-                            <img
-                                className="d-block w-40"
-                                src="https://media.geeksforgeeks.org/wp-content/uploads/20210425122739/2-300x115.png"
-                                alt="Image One"
-                            />
-                            <Carousel.Caption>
-                                <h3>Label for first slide</h3>
-                                <p>Sample Text for Image One</p>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                                className="d-block w-40"
-                                src="https://media.geeksforgeeks.org/wp-content/uploads/20210425122716/1-300x115.png"
-                                alt="Image Two"
-                            />
-                            <Carousel.Caption>
-                                <h3>Label for second slide</h3>
-                                <p>Sample Text for Image Two</p>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                    </Carousel>
+                <Col>
+                <Swiper loop={true} height={100} slidesPerView={2} spaceBetween={30} pagination={{
+                    }} className="mySwiper">
+                        <SwiperSlide>
+                        <Image className="swiper-image" src={aws}  roundedCircle={true}/>
+                        <br/>
+                        <br/>
+						Impact Rooms partners with AWS to bring infrastructure, resources and access to African start ups.	Announcement December 2021
+                        </SwiperSlide>
+                        <SwiperSlide>
+                        <Image className="swiper-image" src={gbv}  roundedCircle={true}/>
+                        <br/>
+                        <br/>
+                        Impact Rooms raises seven-digit growth capital from US based investment group - Global Blockchain Ventures AnnouncementDecember 2021
+                        </SwiperSlide>
+                        <SwiperSlide>
+                        <Image className="swiper-image" src={shortlist}  roundedCircle={true}/>
+                        <br/>
+                        <br/>
+                        Impact Rooms partners with renowned recruitment and executive search firm - Shortlist - to bring top-talent to African start ups. AnnouncementNovember 2021
+                        </SwiperSlide>
+                        <SwiperSlide>
+                        <Image className="swiper-image" src={picture8}  roundedCircle={true}/>
+                        <br/>
+                        <br/>
+                        Impact Rooms announces Barry Palte as company Chairperson - bringing world-class investment experience to the team AnnouncementDecember 2021
+                        </SwiperSlide>
+                        <SwiperSlide>
+                        <Image className="swiper-image" src={nexus}  roundedCircle={true}/>
+                        <br/>
+                        <br/>
+                        Impact Rooms partners with Germany based, Impact Nexus, to evaluate, score and forecast the impact of companies AnnouncementNovember 2021
+                        </SwiperSlide>
+                        <SwiperSlide>
+                        <Image className="swiper-image" src={innovesta}  roundedCircle={true}/>
+                        <br/>
+                        <br/>
+                        Impact Rooms partners with Israeli based, Innovesta, to bring clients real-time market updates and sentiment AnnouncementDecember 2021
+                        </SwiperSlide>
+                    </Swiper>
                 </Col>
             </Row>
+            <br/>
+            <br/>
 
             <Row className="justify-content-md-center">
                 <Col xs={10}>
