@@ -3,16 +3,19 @@ import { Container, Image, Row, Col, Card, Button, Nav, Carousel } from 'react-b
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination } from 'swiper';
 import Typewriter from "typewriter-effect";
-import './HomePage.css';
-import "swiper/css";
-import "swiper/css/pagination";
+import { IconContext } from "react-icons";
+import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill} from "react-icons/bs";
 import nature from '../../assets/vr.jpg';
 import aws from '../../assets/homePage/AWS.jpeg';
 import gbv from "../../assets/homePage/gbv.jpeg";
 import shortlist from "../../assets/homePage/Shortlist.png";
 import picture8 from "../../assets/homePage/Picture8.jpeg";
 import nexus from "../../assets/homePage/Impact-nexus.png";
-import innovesta from "../../assets/homePage/Innovesta.png"
+import innovesta from "../../assets/homePage/Innovesta.png";
+import './HomePage.css';
+import "swiper/css";
+import "swiper/css/pagination";
+import clsx from "clsx";
 
 
 SwiperCore.use([Pagination]);
@@ -60,7 +63,7 @@ function HomePage() {
                     <ColoredLine color="#277C93" />
                 </Col>
                 <Col>
-                    <Card style={{ width: '40rem' }} border="primary" className="center">
+                    <Card style={{ width: '40rem' }} border="primary" className={clsx("center", "shadow-lg")}>
                         <Card.Header><Card.Title>Create Your FREE Company Dashboard</Card.Title></Card.Header>
                         <Card.Body>
                             <br />
@@ -79,24 +82,44 @@ function HomePage() {
 
             <Row className="mx-auto my-4">
                 <Col>
-                    <Card style={{ width: '40rem' }} >
+                    <Card className={clsx("center", "shadow-lg")}>
+                        <br/>
                         <Card.Body>
-                            <Card.Title> <Nav.Link href="#home">Investors</Nav.Link></Card.Title>
+                            <IconContext.Provider value={{ color: "#277C93", size: "50px" }}>
+                                <BsFillArrowLeftCircleFill/>
+                            </IconContext.Provider>
+                            <br/>
+                            <br/>
+                            <Card.Title><Nav.Link href="/Investors"><h2>Investors</h2></Nav.Link></Card.Title>
                             <br />
+                            <ColoredLine color="#277C93" />
+                            <br/>
                             <Card.Text>
-                                Grow your business, evaluate your progress, earn rewards, match with investors and much more, from ideation to maturity.
+                            <h5>Accredited and institutional investors interested <br/> or active in Africa</h5>
                             </Card.Text>
+                            <br/>
+                            <ColoredLine color="#277C93" />
                         </Card.Body>
                     </Card>
                 </Col>
                 <Col>
-                    <Card style={{ width: '40rem' }} >
+                    <Card className={clsx("center", "shadow-lg")}>
+                        <br/>
                         <Card.Body>
-                            <Card.Title> <Nav.Link href="#home">Companies</Nav.Link></Card.Title>
+                        <IconContext.Provider value={{ color: "#277C93", size: "50px" }}>
+                                <BsFillArrowRightCircleFill/>
+                            </IconContext.Provider>
+                            <br/>
+                            <br/>
+                            <Card.Title> <Nav.Link href="/Companies"><h2>Companies</h2></Nav.Link></Card.Title>
                             <br />
+                            <ColoredLine color="#277C93" />
+                            <br/>
                             <Card.Text>
-                                Africa focussed enterprises at any stage looking to grow or raise investment
+                                <h5>Africa focussed enterprises at any stage looking to grow or raise investment</h5>
                             </Card.Text>
+                            <br/>
+                            <ColoredLine color="#277C93" />
                         </Card.Body>
                     </Card>
                 </Col>
@@ -106,7 +129,7 @@ function HomePage() {
             <Row className="justify-content-md-center">
                 <Col>
                     <Swiper loop={true} height={100} slidesPerView={2} spaceBetween={30} pagination={{
-                    }} className="mySwiper">
+                    }} className="align-middle">
                         <SwiperSlide>
                             <Image className="swiper-image" src={aws} roundedCircle={true} />
                             <br />
@@ -167,6 +190,7 @@ function HomePage() {
                     <ColoredLine color="#277C93" />
                 </Col>
             </Row>
+            <br/>
 
         </Container>
     )

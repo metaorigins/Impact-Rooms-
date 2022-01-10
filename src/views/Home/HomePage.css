@@ -36,6 +36,7 @@
   text-align: center;
   font-size: 18px;
   background: #fff;
+  padding-right: 30px;
 }
 
 .swiper-slide img {
@@ -49,4 +50,5 @@
 .center {
   text-align: center;
 }
+
 
