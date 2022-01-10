@@ -1,0 +1,9 @@
+.navbar {
+    min-height: 80px;
+  }
+
+  .logo {
+    width: 300px;
+    height: 75px;
+    padding-top: 5px;
+  }

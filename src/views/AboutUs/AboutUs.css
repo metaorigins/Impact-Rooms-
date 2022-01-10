@@ -1,0 +1,38 @@
+.photoCompany {
+    width: 100vw;
+    height: 50vh;
+    padding-bottom: 40px;
+  }
+
+  .text-on-image {
+    position: absolute;
+    right: 80%;
+    left: 0%;
+    bottom: 60%;
+    color: aliceblue;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cardImage{
+    padding:0;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .card{
+    margin-right: 35px;
+}
+
+.photoLady {
+  width: 50vw;
+  height: 50vh;
+  padding-right: 20px;
+}
+

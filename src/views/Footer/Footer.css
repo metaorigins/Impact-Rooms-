@@ -1,0 +1,25 @@
+.photoFooter {
+    width: 70%;
+    height: 50%;
+    padding-bottom: 30px;
+  }
+  
+  a.facebook {
+    color: #4968ad;
+    padding-right: 10px;
+  }
+  
+  a.twitter {
+    color: #49a1eb;
+    padding-right: 10px;
+  }
+  
+  a.instagram {
+    color: white;
+    padding-right: 10px;
+  }
+
+  a.linkdin {
+    padding-right: 10px;
+  }
+

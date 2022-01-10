@@ -1,0 +1,27 @@
+.photo {
+    width: 100vw;
+    height: 60vh;
+    padding-bottom: 30px;
+  }
+
+  .text-on-image {
+    position: absolute;
+    right: 80%;
+    left: 0;
+    bottom: 60%;
+    color: aliceblue;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .text-on-image2 {
+    position: absolute;
+    right: 80%;
+    left: 0%;
+    bottom: 45%;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+  }
