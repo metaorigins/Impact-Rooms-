@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Image, Row, Col, Card, Button, Nav, Carousel } from 'react-bootstrap';
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Pagination} from 'swiper';
+import SwiperCore, { Pagination } from 'swiper';
 import Typewriter from "typewriter-effect";
 import './HomePage.css';
 import "swiper/css";
@@ -24,8 +24,7 @@ function HomePage() {
         <hr
             style={{
                 color,
-                backgroundColor: color,
-                height: 5
+                height: 5,
             }}
         />
     );
@@ -47,21 +46,30 @@ function HomePage() {
             </Row>
             <Image src={nature} className="photo"></Image>
 
+
+
             <Row className="mx-auto my-4">
                 <Col>
-                    Enabling African entrepreneurship at scale  through technology, data and collaboration.
+                    <ColoredLine color="#277C93" />
+                    <br />
+                    <br />
+                    <h4 className="center">Enabling African entrepreneurship at scale  through technology, data and collaboration.</h4>
+                    <br />
+                    <br />
+                    <br />
+                    <ColoredLine color="#277C93" />
                 </Col>
                 <Col>
-                    <Card style={{ width: '40rem' }}>
+                    <Card style={{ width: '40rem' }} border="primary" className="center">
+                        <Card.Header><Card.Title>Create Your FREE Company Dashboard</Card.Title></Card.Header>
                         <Card.Body>
-                            <Card.Title>Create Your FREE Company Dashboard</Card.Title>
                             <br />
-                            <Button variant="primary">Let's Get Started</Button>
+                            <Button variant="primary" size="lg">Let's Get Started</Button>
                             <br />
                             <br />
                             <br />
                             <Card.Text>
-                                Accredited and institutional investors interested or active in Africa
+                                Grow your business, evaluate your progress, earn rewards, match with investors and much more, from ideation to maturity.
                             </Card.Text>
                         </Card.Body>
                     </Card>
@@ -93,53 +101,53 @@ function HomePage() {
                     </Card>
                 </Col>
             </Row>
-            <br/>
+            <br />
 
             <Row className="justify-content-md-center">
                 <Col>
-                <Swiper loop={true} height={100} slidesPerView={2} spaceBetween={30} pagination={{
+                    <Swiper loop={true} height={100} slidesPerView={2} spaceBetween={30} pagination={{
                     }} className="mySwiper">
                         <SwiperSlide>
-                        <Image className="swiper-image" src={aws}  roundedCircle={true}/>
-                        <br/>
-                        <br/>
-						Impact Rooms partners with AWS to bring infrastructure, resources and access to African start ups.	Announcement December 2021
+                            <Image className="swiper-image" src={aws} roundedCircle={true} />
+                            <br />
+                            <br />
+                            Impact Rooms partners with AWS to bring infrastructure, resources and access to African start ups.	Announcement December 2021
                         </SwiperSlide>
                         <SwiperSlide>
-                        <Image className="swiper-image" src={gbv}  roundedCircle={true}/>
-                        <br/>
-                        <br/>
-                        Impact Rooms raises seven-digit growth capital from US based investment group - Global Blockchain Ventures AnnouncementDecember 2021
+                            <Image className="swiper-image" src={gbv} roundedCircle={true} />
+                            <br />
+                            <br />
+                            Impact Rooms raises seven-digit growth capital from US based investment group - Global Blockchain Ventures AnnouncementDecember 2021
                         </SwiperSlide>
                         <SwiperSlide>
-                        <Image className="swiper-image" src={shortlist}  roundedCircle={true}/>
-                        <br/>
-                        <br/>
-                        Impact Rooms partners with renowned recruitment and executive search firm - Shortlist - to bring top-talent to African start ups. AnnouncementNovember 2021
+                            <Image className="swiper-image" src={shortlist} roundedCircle={true} />
+                            <br />
+                            <br />
+                            Impact Rooms partners with renowned recruitment and executive search firm - Shortlist - to bring top-talent to African start ups. AnnouncementNovember 2021
                         </SwiperSlide>
                         <SwiperSlide>
-                        <Image className="swiper-image" src={picture8}  roundedCircle={true}/>
-                        <br/>
-                        <br/>
-                        Impact Rooms announces Barry Palte as company Chairperson - bringing world-class investment experience to the team AnnouncementDecember 2021
+                            <Image className="swiper-image" src={picture8} roundedCircle={true} />
+                            <br />
+                            <br />
+                            Impact Rooms announces Barry Palte as company Chairperson - bringing world-class investment experience to the team AnnouncementDecember 2021
                         </SwiperSlide>
                         <SwiperSlide>
-                        <Image className="swiper-image" src={nexus}  roundedCircle={true}/>
-                        <br/>
-                        <br/>
-                        Impact Rooms partners with Germany based, Impact Nexus, to evaluate, score and forecast the impact of companies AnnouncementNovember 2021
+                            <Image className="swiper-image" src={nexus} roundedCircle={true} />
+                            <br />
+                            <br />
+                            Impact Rooms partners with Germany based, Impact Nexus, to evaluate, score and forecast the impact of companies AnnouncementNovember 2021
                         </SwiperSlide>
                         <SwiperSlide>
-                        <Image className="swiper-image" src={innovesta}  roundedCircle={true}/>
-                        <br/>
-                        <br/>
-                        Impact Rooms partners with Israeli based, Innovesta, to bring clients real-time market updates and sentiment AnnouncementDecember 2021
+                            <Image className="swiper-image" src={innovesta} roundedCircle={true} />
+                            <br />
+                            <br />
+                            Impact Rooms partners with Israeli based, Innovesta, to bring clients real-time market updates and sentiment AnnouncementDecember 2021
                         </SwiperSlide>
                     </Swiper>
                 </Col>
             </Row>
-            <br/>
-            <br/>
+            <br />
+            <br />
 
             <Row className="justify-content-md-center">
                 <Col xs={10}>
@@ -149,11 +157,11 @@ function HomePage() {
             <br />
             <br />
             <Row className="justify-content-md-center">
-                <Col xs={4}>
-                    <h2>Prepare. Grow. Succeed.</h2>
+                <Col>
+                    <h2 className="center">Prepare. Grow. Succeed.</h2>
                 </Col>
             </Row>
-            <br/>
+            <br />
             <Row className="justify-content-md-center">
                 <Col xs={10}>
                     <ColoredLine color="#277C93" />
