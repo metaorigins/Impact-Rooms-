@@ -1,5 +1,5 @@
 import React from "react";
-import logo from '../../assets/Asset 4.png'
+import logo from '../../assets/Asset_final.png'
 import { Box } from "./FooterStyles";
 import { Row, Col, Form, Image, Container, Nav, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

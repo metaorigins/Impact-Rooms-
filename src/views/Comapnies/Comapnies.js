@@ -1,15 +1,27 @@
 import React from 'react';
 import { Container, Image, Row, Col, Button, Carousel, Card, Form } from 'react-bootstrap';
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Pagination } from 'swiper';
 import { GiAtom, GiMagnifyingGlass, GiTrophyCup, GiDeerTrack, GiSmart, GiLotus } from 'react-icons/gi';
-import { FaPuzzlePiece, FaCogs } from 'react-icons/fa';
+import { FaPuzzlePiece, FaCogs, FaGlobeAfrica } from 'react-icons/fa';
 import { RiShieldStarFill, RiHeartPulseFill, RiZoomInFill } from 'react-icons/ri';
 import { IoIosInfinite } from 'react-icons/io';
 import { IconContext } from "react-icons";
 import companyMan from '../../assets/companyMan.jpg';
-import dashboard from '../../assets/previous.png';
+import dashboard from '../../assets/Main Dashboard.png';
+import joe from "../../assets/firstPerson.jpeg";
+import andreas from "../../assets/secondPerson.jpeg";
+import robin from "../../assets/thirdPerson.jpeg";
+import investor from "../../assets/fourthPerson.jpeg"
 import './Companies.css';
+import "swiper/css";
+import "swiper/css/pagination";
+import clsx from "clsx";
+
+SwiperCore.use([Pagination]);
 
 function Companies() {
+
 
   const ColoredLine = ({ color }) => (
     <hr
@@ -23,51 +35,105 @@ function Companies() {
 
   return (
     <Container fluid className="p-0">
-       <Row>
+      <Row>
         <h1 className="text-on-imageCompany">Welcome, Companies.</h1>
       </Row>
       <Image src={companyMan} className="photoCompanyMan"></Image>
       <Row>
         <Col className="row">
-          <Image src={dashboard} className="photoDashboard"></Image>
-          <p>*Company dashboards are currently unavailable for mobile users</p>
+          <Image src={dashboard} className={clsx("block-example border border-primary", "shadow-lg p-3 mb-5 bg-white rounded")}></Image>
+          *Company dashboards are currently unavailable for mobile users
         </Col>
-        <Col>
+        <Col className="center">
           <p className='content1'>Create your FREE company dashboard</p>
-          <br/>
           <Button variant="primary">Let's Get Started</Button>
+          <br />
+          <br />
+          <ColoredLine color="#277C93" />
           <p className='content1'>Get notified on launch in March 2022</p>
         </Col>
       </Row>
 
-      <Row className="mx-auto my-4">
+      <Row className="justify-content-md-center">
         <Col>
-          <Carousel>
-            <Carousel.Item>
-              <img
-                className="d-block w-40"
-                src="https://media.geeksforgeeks.org/wp-content/uploads/20210425122739/2-300x115.png"
-                alt="Image One"
-              />
-              <Carousel.Caption>
-                <h3>Label for first slide</h3>
-                <p>Sample Text for Image One</p>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-40"
-                src="https://media.geeksforgeeks.org/wp-content/uploads/20210425122716/1-300x115.png"
-                alt="Image Two"
-              />
-              <Carousel.Caption>
-                <h3>Label for second slide</h3>
-                <p>Sample Text for Image Two</p>
-              </Carousel.Caption>
-            </Carousel.Item>
-          </Carousel>
+          <Swiper centeredSlides={true} loop={true} height={100} spaceBetween={30} pagination={{
+          }} className="align-middle" >
+            <SwiperSlide>
+              "Amazing! We are very excited to work together, even for consecutive raises"
+              <br />
+              <br />
+              <div style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                marginRight: "300px",
+                paddingRight: "20px",
+              }}>
+                <Image src={joe} roundedCircle={true} />
+                Joe
+                <br />
+                {'    '}Founder, CEO
+              </div>
+
+            </SwiperSlide>
+            <SwiperSlide>
+              "Amazing! What a great, profound, deep, insightful analysis"
+              <br />
+              <br />
+              <div style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                marginRight: "300px",
+                paddingRight: "20px",
+              }}>
+                <Image className="swiper-image" src={andreas} roundedCircle={true} />
+                Andreas
+                <br />
+                Founder, Chairperson
+              </div>
+
+            </SwiperSlide>
+            <SwiperSlide>
+              "Honestly, it's amazing, very useful!"
+              <br />
+              <br />
+              <div style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                marginRight: "300px",
+                paddingRight: "20px",
+              }}>
+                <Image className="swiper-image" src={robin} roundedCircle={true} />
+                Robin
+                <br />
+                Founder
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              "The shortlist is just brilliant. Relevant and transparent."
+              <br />
+              <br />
+              <div style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                marginRight: "300px",
+                paddingRight: "20px",
+              }}>
+                <Image className="swiper-image" src={investor} roundedCircle={true} />
+                Investor
+                <br />
+                Managing Partner
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </Col>
       </Row>
+      <br />
+      <br />
+      <br />
 
       <Row className="justify-content-md-center">
         <Col xs={10}>
@@ -81,7 +147,7 @@ function Companies() {
       </Row>
 
 
-      <Row className="justify-content-md-center">
+      <Row className="centerCompany">
         <Col>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <IconContext.Provider value={{ color: "#277C93", size: "40px" }}>
@@ -119,7 +185,7 @@ function Companies() {
       </Row>
       <br />
       <br />
-      <Row>
+      <Row className="centerCompany">
         <Col>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <IconContext.Provider value={{ color: "#277C93", size: "40px" }}>
@@ -157,7 +223,7 @@ function Companies() {
       <br />
       <br />
 
-      <Row>
+      <Row className="centerCompany">
         <Col>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <IconContext.Provider value={{ color: "#277C93", size: "40px" }}>
@@ -193,8 +259,8 @@ function Companies() {
         </Col>
       </Row>
       <br />
-      <br/>
-      <br/>
+      <br />
+      <br />
 
       <Row className="justify-content-md-center">
         <Col xs={10}>
@@ -211,11 +277,11 @@ function Companies() {
       <br />
       <br />
 
-      <Row>
+      <Row className="centerCompany">
         <Col>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <IconContext.Provider value={{ color: "#277C93", size: "40px" }}>
-              <RiZoomInFill />
+              <FaGlobeAfrica />
             </IconContext.Provider>
           </div>
           <br />
@@ -233,15 +299,15 @@ function Companies() {
         <Col>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <IconContext.Provider value={{ color: "#277C93", size: "40px" }}>
-              <GiLotus/>
+              <GiLotus />
             </IconContext.Provider>
           </div>
           <br />
           <h2>Positively Impactful</h2>
         </Col>
       </Row>
-      <br/>
-      <br/>
+      <br />
+      <br />
 
       <Row className="justify-content-md-center">
         <Col xs={10}>
@@ -249,19 +315,18 @@ function Companies() {
         </Col>
       </Row>
       <br />
-      <br />
-      <Row className="justify-content-md-center">
-        <Col xs={2}>
+      <Row className="center">
+        <Col>
           <Button variant="secondary">Contact Us</Button>
         </Col>
       </Row>
-      <br/>
+      <br />
       <Row className="justify-content-md-center">
         <Col xs={10}>
           <ColoredLine color="#277C93" />
         </Col>
       </Row>
-      <br/>
+      <br />
     </Container>
   );
 }
