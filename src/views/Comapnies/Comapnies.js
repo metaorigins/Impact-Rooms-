@@ -20,9 +20,10 @@ import clsx from "clsx";
 
 SwiperCore.use([Pagination]);
 
+
+
+
 function Companies() {
-
-
   const ColoredLine = ({ color }) => (
     <hr
       style={{
@@ -32,6 +33,10 @@ function Companies() {
       }}
     />
   );
+  
+  function open() {
+    window.open('mailto:info@impactrooms.com?subject=Subject')
+  }
 
   return (
     <Container fluid className="p-0">
@@ -56,7 +61,7 @@ function Companies() {
 
       <Row className="justify-content-md-center">
         <Col>
-          <Swiper centeredSlides={true} loop={true} height={100} spaceBetween={30} pagination={{
+          <Swiper grabCursor={true} centeredSlides={true} loop={true} height={100} spaceBetween={30} pagination={{
           }} className="align-middle" >
             <SwiperSlide>
               "Amazing! We are very excited to work together, even for consecutive raises"
@@ -72,9 +77,8 @@ function Companies() {
                 <Image src={joe} roundedCircle={true} />
                 Joe
                 <br />
-                {'    '}Founder, CEO
+              Founder, CEO
               </div>
-
             </SwiperSlide>
             <SwiperSlide>
               "Amazing! What a great, profound, deep, insightful analysis"
@@ -317,7 +321,7 @@ function Companies() {
       <br />
       <Row className="center">
         <Col>
-          <Button variant="secondary">Contact Us</Button>
+          <Button variant="outline-primary" onClick={open}>Contact Us</Button>
         </Col>
       </Row>
       <br />

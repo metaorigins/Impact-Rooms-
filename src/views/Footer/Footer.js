@@ -17,10 +17,10 @@ const Footer = () => {
             <Container>
                 <Row>
                     <Col xs={4}>
-                        <Image src={logo} className="photoFooter"></Image>
-                        <br/>
+                        <Nav.Link href="/"><Image src={logo} className="photoFooter"></Image></Nav.Link>
+                        <br />
                         <Form.Control type="name" placeholder="Type & Hit Enter..." />
-                        <br/>
+                        <br />
                         <a href="https://twitter.com/ImpactRooms?s=08" className="twitter social">
                             <FontAwesomeIcon icon={faTwitter} size="2x" />
                         </a>

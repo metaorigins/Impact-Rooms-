@@ -128,7 +128,7 @@ function HomePage() {
 
             <Row className="justify-content-md-center">
                 <Col>
-                    <Swiper loop={true} height={100} slidesPerView={2} spaceBetween={30} pagination={{
+                    <Swiper grabCursor={true} loop={true} height={100} slidesPerView={2} spaceBetween={30} pagination={{
                     }} className="align-middle">
                         <SwiperSlide>
                             <Image className="swiper-image" src={aws} roundedCircle={true} />
