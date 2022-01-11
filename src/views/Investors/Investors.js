@@ -1,15 +1,19 @@
 import React from 'react';
-import { Container, Image, Row, Col, Button, Carousel, Card, Form } from 'react-bootstrap';
+import { Container, Image, Row, Col, Button, Carousel, Card, Form, Accordion } from 'react-bootstrap';
 import { IconContext } from "react-icons";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import { GiDeerTrack, GiSmart, GiMagnifyingGlass, GiAtom } from "react-icons/gi";
 import { BsFillHandThumbsUpFill } from "react-icons/bs";
 import { FaGlobeAfrica } from 'react-icons/fa';
 import companyMan from '../../assets/companyMan.jpg';
-import './Investors.css'
+import './Investors.css';
+import clsx from "clsx";
 
 function Investors() {
 
+  function open() {
+    window.open('mailto:info@impactrooms.com?subject=Subject')
+  }
 
   const ColoredLine = ({ color }) => (
     <hr
@@ -29,9 +33,9 @@ function Investors() {
       <Image src={companyMan} className="photoCompanyMan"></Image>
       <Row>
         <Col>
-          <Card style={{ width: '40rem' }}>
+          <Card style={{ width: '40rem' }} border="primary" className={clsx("center", "shadow-lg")}>
             <Card.Body>
-              <Card.Title>Hi</Card.Title>
+              <Card.Title>Card Image.......</Card.Title>
               <br />
               <Card.Text>
                 Hi, my name is Esgie.
@@ -53,15 +57,17 @@ function Investors() {
           <br />
           Register now and receive AI matched and fully evaluated deals to your inbox
           <br />
-          <br/>
+          <br />
           <ColoredLine color="#277C93" />
         </Col>
       </Row>
       <br />
       <br />
+      <br />
+      <br />
 
       <Row className="justify-content-md-center">
-        <Col xs={4}>
+        <Col className="center">
           <h4>What Will The Platform Do?</h4>
         </Col>
       </Row>
@@ -69,7 +75,7 @@ function Investors() {
       <br />
 
 
-      <Row>
+      <Row className="centerInvestor">
         <Col>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <IconContext.Provider value={{ color: "#277C93", size: "40px" }}>
@@ -106,9 +112,11 @@ function Investors() {
       </Row>
       <br />
       <br />
+      <br />
+      <br />
 
 
-      <Row>
+      <Row className="centerInvestor">
         <Col>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <IconContext.Provider value={{ color: "#277C93", size: "40px" }}>
@@ -145,6 +153,9 @@ function Investors() {
       </Row>
       <br />
       <br />
+      <br />
+      <br />
+      <br />
 
       <Row className="justify-content-md-center">
         <Col xs={3}>
@@ -155,7 +166,7 @@ function Investors() {
       <br />
 
 
-      <Row>
+      <Row className="centerInvestor">
         <Col>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <IconContext.Provider value={{ color: "#277C93", size: "40px" }}>
@@ -201,42 +212,45 @@ function Investors() {
           All of our companies are Africa focussed. That means they can be registered around the world
         </Col>
       </Row>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
+      <br />
+      <br />
+      <br />
+      <br />
 
-      <Row>
-        <Col><h3>Are you eligible?</h3></Col>
+      <Row className="accordion">
+        <Col>
+          <Accordion>
+            <Accordion.Item eventKey="0">
+              <Accordion.Header>Are you eligible?</Accordion.Header>
+              <Accordion.Body>
+                We accept applications from accredited individuals, high-net-worth individuals (‘HNIs’), Angel Investors, Family Offices, development finance institutions (‘DFIs’), private, public and cryptocurrency funds, and any other retail or institutional entities that are actively investing or interested in investing in Africa.
+              </Accordion.Body>
+            </Accordion.Item>
+          </Accordion>
+
+        </Col>
       </Row>
-      <br/>
+      <br />
 
       <Row className="justify-content-md-center">
         <Col xs={10}>
-          <ColoredLine color="orange" />
+          <ColoredLine color="#277C93" />
+        </Col>
+      </Row>
+      <br />
+      <Row className="center">
+        <Col>
+          <Button variant="outline-primary" onClick={open}>Contact Us</Button>
+        </Col>
+      </Row>
+      <br />
+      <Row className="justify-content-md-center">
+        <Col xs={10}>
+          <ColoredLine color="#277C93" />
         </Col>
       </Row>
       <br />
       <br />
-      <Row className="justify-content-md-center">
-        <Col xs={2}>
-          <Button variant="secondary">Contact Us</Button>
-        </Col>
-      </Row>
-      <br/>
-      <Row className="justify-content-md-center">
-        <Col xs={10}>
-          <ColoredLine color="orange" />
-        </Col>
-      </Row>
-      <br/>
-
-      
-
-
-
-
-
 
     </Container>
   );

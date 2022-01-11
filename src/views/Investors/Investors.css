@@ -14,3 +14,13 @@
     display: flex;
     justify-content: center;
   }
+
+  .centerInvestor{
+    text-align: center;
+    padding-right: 65px;
+  }
+
+  .accordion{
+    display: flex;
+    justify-content: left;
+  }
