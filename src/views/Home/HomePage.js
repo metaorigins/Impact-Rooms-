@@ -5,7 +5,7 @@ import SwiperCore, { Pagination } from 'swiper';
 import Typewriter from "typewriter-effect";
 import { IconContext } from "react-icons";
 import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill} from "react-icons/bs";
-import nature from '../../assets/vr.jpg';
+import vr from '../../assets/vr.jpg';
 import aws from '../../assets/homePage/AWS.jpeg';
 import gbv from "../../assets/homePage/gbv.jpeg";
 import shortlist from "../../assets/homePage/Shortlist.png";
@@ -22,6 +22,7 @@ SwiperCore.use([Pagination]);
 
 
 function HomePage() {
+
 
     const ColoredLine = ({ color }) => (
         <hr
@@ -47,9 +48,8 @@ function HomePage() {
                 </div>
                 <h2 className="text-on-image2">Enterprise Escalator</h2>
             </Row>
-            <Image src={nature} className="photo"></Image>
-
-
+            <Image src={vr} className={clsx("photo")}/>
+       
 
             <Row className="mx-auto my-4">
                 <Col>
@@ -63,7 +63,7 @@ function HomePage() {
                     <ColoredLine color="#277C93" />
                 </Col>
                 <Col>
-                    <Card style={{ width: '40rem' }} border="primary" className={clsx("center", "shadow-lg")}>
+                    <Card border="primary" className={clsx("center", "shadow-lg")}>
                         <Card.Header><Card.Title>Create Your FREE Company Dashboard</Card.Title></Card.Header>
                         <Card.Body>
                             <br />

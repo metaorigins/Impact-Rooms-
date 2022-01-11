@@ -4,6 +4,12 @@
     padding-bottom: 40px;
   }
 
+  .photoMap{
+    width: 100vw;
+    height: 100vh;
+    padding-left: 50px;
+  }
+
   .text-on-image {
     position: absolute;
     right: 80%;

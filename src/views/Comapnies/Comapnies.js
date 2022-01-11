@@ -33,7 +33,7 @@ function Companies() {
       }}
     />
   );
-  
+
   function open() {
     window.open('mailto:info@impactrooms.com?subject=Subject')
   }
@@ -75,9 +75,10 @@ function Companies() {
                 paddingRight: "20px",
               }}>
                 <Image src={joe} roundedCircle={true} />
+                <br />
                 Joe
                 <br />
-              Founder, CEO
+                Founder, CEO
               </div>
             </SwiperSlide>
             <SwiperSlide>

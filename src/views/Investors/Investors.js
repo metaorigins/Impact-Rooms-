@@ -2,10 +2,11 @@ import React from 'react';
 import { Container, Image, Row, Col, Button, Carousel, Card, Form, Accordion } from 'react-bootstrap';
 import { IconContext } from "react-icons";
 import { AiOutlineCheckCircle } from "react-icons/ai";
-import { GiDeerTrack, GiSmart, GiMagnifyingGlass, GiAtom } from "react-icons/gi";
-import { BsFillHandThumbsUpFill } from "react-icons/bs";
+import { GiDeerTrack, GiSmart, GiMagnifyingGlass, GiAtom, GiStairsGoal } from "react-icons/gi";
+import { BsFillHandThumbsUpFill, BsFillStopwatchFill } from "react-icons/bs";
 import { FaGlobeAfrica } from 'react-icons/fa';
 import companyMan from '../../assets/companyMan.jpg';
+import wave from "../../assets/simle_emoji.png";
 import './Investors.css';
 import clsx from "clsx";
 
@@ -35,17 +36,25 @@ function Investors() {
         <Col>
           <Card style={{ width: '40rem' }} border="primary" className={clsx("center", "shadow-lg")}>
             <Card.Body>
-              <Card.Title>Card Image.......</Card.Title>
+              <Card.Title><Image src={wave} className="photoWave" /></Card.Title>
               <br />
               <Card.Text>
                 Hi, my name is Esgie.
                 <br />
+                <br/>
                 I am your platform host.
+                <br />
+                <br/>
+                Let's get you registered.
               </Card.Text>
-              <br />
               <br />
             </Card.Body>
             <Card.Footer>
+            <IconContext.Provider value={{ color: "#277C93", size: "15px" }}>
+              <BsFillStopwatchFill />
+            </IconContext.Provider>
+              Takes 4 mins
+              <br/>
               <Button variant="primary">Start</Button>
             </Card.Footer>
           </Card>
@@ -170,7 +179,7 @@ function Investors() {
         <Col>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <IconContext.Provider value={{ color: "#277C93", size: "40px" }}>
-              <GiSmart />
+              <GiStairsGoal />
             </IconContext.Provider>
           </div>
           <br />

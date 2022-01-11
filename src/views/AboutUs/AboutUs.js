@@ -22,6 +22,7 @@ import inclusive from "../../assets/AboutUs/3-6.png";
 import impact from "../../assets/AboutUs/4-6.png";
 import innovate from "../../assets/AboutUs/5-5.png";
 import collab from "../../assets/AboutUs/6-5.png";
+import map from "../../assets/map.svg"
 import clsx from "clsx";
 import './AboutUs.css';
 
@@ -145,6 +146,8 @@ function AboutUs() {
           <p>A highly experienced and diverse team across specialisms, gender, age and geography, who each share a deep passion and knowledge for Africa</p>
         </Col>
       </Row>
+      <br/>
+      <br/>
 
 
       <Row className="justify-content-md-center">
@@ -153,10 +156,17 @@ function AboutUs() {
         </Col>
       </Row>
       <br />
+      <br/>
+
+      <Row>
+        <Col>
+        <Image src={map} className="photoMap"/>
+        </Col>
+      </Row>
+      <br/>
 
 
       <Row className="mx-auto my-4">
-
         <Col>
           <Card fluid className="p-0" className={clsx("center", "shadow-lg",)} >
             <Card.Img variant="top" src={OliCard} />
