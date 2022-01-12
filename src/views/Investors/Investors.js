@@ -28,46 +28,54 @@ function Investors() {
 
   return (
     <Container fluid className="p-0">
-      <Row>
+      <Row className="fontType">
         <h1 className="text-on-imageCompany">Welcome, Investors.</h1>
       </Row>
       <Image src={companyMan} className="photoCompanyMan"></Image>
       <Row>
         <Col>
-          <Card style={{ width: '40rem' }} border="primary" className={clsx("center", "shadow-lg")}>
+          <Card border="primary" className={clsx("center", "shadow-lg", 'fontType')}>
             <Card.Body>
               <Card.Title><Image src={wave} className="photoWave" /></Card.Title>
               <br />
               <Card.Text>
                 Hi, my name is Esgie.
                 <br />
-                <br/>
+                <br />
                 I am your platform host.
                 <br />
-                <br/>
+                <br />
                 Let's get you registered.
               </Card.Text>
               <br />
             </Card.Body>
             <Card.Footer>
-            <IconContext.Provider value={{ color: "#277C93", size: "15px" }}>
-              <BsFillStopwatchFill />
-            </IconContext.Provider>
+              <IconContext.Provider value={{ color: "#277C93", size: "15px" }}>
+                <BsFillStopwatchFill />
+              </IconContext.Provider>
               Takes 4 mins
-              <br/>
+              <br />
               <Button variant="primary">Start</Button>
             </Card.Footer>
           </Card>
         </Col>
-        <Col>
-          <ColoredLine color="#277C93" />
+        <Col className={clsx('fontType', 'center', 'paddingTop')}>
+          <Row className="justify-content-md-center">
+            <Col xs={11}>
+              <ColoredLine color="#277C93" />
+            </Col>
+          </Row>
           <br />
-          <h4>Our investor dashboard will launch in April 2022</h4>
+          <h5>Our investor dashboard will launch in April 2022</h5>
           <br />
           Register now and receive AI matched and fully evaluated deals to your inbox
           <br />
           <br />
-          <ColoredLine color="#277C93" />
+          <Row className="justify-content-md-center">
+            <Col xs={11}>
+              <ColoredLine color="#277C93" />
+            </Col>
+          </Row>
         </Col>
       </Row>
       <br />
@@ -76,7 +84,7 @@ function Investors() {
       <br />
 
       <Row className="justify-content-md-center">
-        <Col className="center">
+        <Col className={clsx("center", 'fontType')}>
           <h4>What Will The Platform Do?</h4>
         </Col>
       </Row>
@@ -84,7 +92,7 @@ function Investors() {
       <br />
 
 
-      <Row className="centerInvestor">
+      <Row className={clsx("centerInvestor", 'fontType')}>
         <Col>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <IconContext.Provider value={{ color: "#277C93", size: "40px" }}>
@@ -125,7 +133,7 @@ function Investors() {
       <br />
 
 
-      <Row className="centerInvestor">
+      <Row className={clsx("centerInvestor", 'fontType')}>
         <Col>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <IconContext.Provider value={{ color: "#277C93", size: "40px" }}>
@@ -166,7 +174,7 @@ function Investors() {
       <br />
       <br />
 
-      <Row className="justify-content-md-center">
+      <Row className={clsx("justify-content-md-center", 'fontType')}>
         <Col xs={3}>
           <h3>Is this relevant for me?</h3>
         </Col>
@@ -175,7 +183,7 @@ function Investors() {
       <br />
 
 
-      <Row className="centerInvestor">
+      <Row className={clsx("centerInvestor", 'fontType')}>
         <Col>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <IconContext.Provider value={{ color: "#277C93", size: "40px" }}>
@@ -226,7 +234,7 @@ function Investors() {
       <br />
       <br />
 
-      <Row className="accordion">
+      <Row className={clsx("accordion", 'fontType')}>
         <Col>
           <Accordion>
             <Accordion.Item eventKey="0">
@@ -247,7 +255,7 @@ function Investors() {
         </Col>
       </Row>
       <br />
-      <Row className="center">
+      <Row className={clsx("center", 'fontType')}>
         <Col>
           <Button variant="outline-primary" onClick={open}>Contact Us</Button>
         </Col>

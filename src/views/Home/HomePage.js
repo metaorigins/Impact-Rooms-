@@ -64,7 +64,7 @@ function HomePage() {
                 </Col>
                 <Col>
                     <Card border="primary" className={clsx("center", "shadow-lg", "fontType")}>
-                        <Card.Header><Card.Title><h4>Create Your FREE Company Dashboard</h4></Card.Title></Card.Header>
+                        <Card.Header><Card.Title><b>Create Your FREE Company Dashboard</b></Card.Title></Card.Header>
                         <Card.Body>
                             <br />
                             <Button variant="primary" size="lg">Let's Get Started</Button>
@@ -136,42 +136,47 @@ function HomePage() {
                             <br />
                             Impact Rooms partners with AWS to bring infrastructure, resources and access to African start ups.
                             <br />
-                            <p className="fontBlue">Announcement - December 2021</p>
+                            <b className="fontBlue">Announcement - December 2021</b>
                         </SwiperSlide>
                         <SwiperSlide>
                             <Image className="swiper-image" src={gbv} roundedCircle={true} />
                             <br />
                             <br />
                             Impact Rooms raises seven-digit growth capital from US based investment group - Global Blockchain Ventures
-                            <p className="fontBlue">Announcement - December 2021</p>
+                            <br/>
+                            <b className="fontBlue">Announcement - December 2021</b>
                         </SwiperSlide>
                         <SwiperSlide>
                             <Image className="swiper-image" src={shortlist} roundedCircle={true} />
                             <br />
                             <br />
                             Impact Rooms partners with renowned recruitment and executive search firm - Shortlist - to bring top-talent to African start ups. 
-                            <p className="fontBlue">Announcement - November 2021</p>
+                            <br/>
+                            <b className="fontBlue">Announcement - November 2021</b>
                         </SwiperSlide>
                         <SwiperSlide>
                             <Image className="swiper-image" src={picture8} roundedCircle={true} />
                             <br />
                             <br />
                             Impact Rooms announces Barry Palte as company Chairperson - bringing world-class investment experience to the team.
-                            <p className="fontBlue">Announcement - December 2021</p>
+                            <br/>
+                            <b className="fontBlue">Announcement - December 2021</b>
                         </SwiperSlide>
                         <SwiperSlide>
                             <Image className="swiper-image" src={nexus} roundedCircle={true} />
                             <br />
                             <br />
                             Impact Rooms partners with Germany based, Impact Nexus, to evaluate, score and forecast the impact of companies.
-                               <p className="fontBlue">Announcement - November 2021</p>
+                            <br/>
+                               <b className="fontBlue">Announcement - November 2021</b>
                         </SwiperSlide>
                         <SwiperSlide>
                             <Image className="swiper-image" src={innovesta} roundedCircle={true} />
                             <br />
                             <br />
                             Impact Rooms partners with Israeli based, Innovesta, to bring clients real-time market updates and sentiment.
-                            <p className="fontBlue">Announcement - December 2021</p>
+                            <br/>
+                            <b className="fontBlue">Announcement - December 2021</b>
                         </SwiperSlide>
                     </Swiper>
                 </Col>

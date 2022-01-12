@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 .photoCompanyMan {
   width: 100vw;
   height: 30vh;
@@ -30,4 +32,16 @@
     width: 15%;
     height: 15%;
     padding-bottom: 20px;
+  }
+
+  .fontType{
+    font-family: 'Montserrat'
+  }
+  
+  .fontBlue{
+    color: #277b93;
+  }
+
+  .paddingTop{
+    padding-top: 50px;
   }

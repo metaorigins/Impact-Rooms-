@@ -47,22 +47,26 @@ function Companies() {
       <Row>
         <Col className="row">
           <Image src={dashboard} className={clsx("block-example border border-primary", "shadow-lg p-3 mb-5 bg-white rounded")}></Image>
-          *Company dashboards are currently unavailable for mobile users
+          <p className='fontType'>*Company dashboards are currently unavailable for mobile users</p>
         </Col>
         <Col className="center">
-          <p className='content1'>Create your FREE company dashboard</p>
+          <p className={clsx('content1', 'fontType')}>Create your FREE company dashboard</p>
           <Button variant="primary">Let's Get Started</Button>
           <br />
           <br />
-          <ColoredLine color="#277C93" />
-          <p className='content1'>Get notified on launch in March 2022</p>
+          <Row className="justify-content-md-center">
+            <Col xs={10}>
+              <ColoredLine color="#277C93" />
+            </Col>
+          </Row>
+          <p className={clsx('content1', 'fontType')}>Get notified on launch in March 2022</p>
         </Col>
       </Row>
 
       <Row className="justify-content-md-center">
         <Col>
           <Swiper grabCursor={true} centeredSlides={true} loop={true} height={100} spaceBetween={30} pagination={{
-          }} className="align-middle" >
+          }} className={clsx("align-middle", 'fontType')} >
             <SwiperSlide>
               "Amazing! We are very excited to work together, even for consecutive raises"
               <br />
@@ -147,12 +151,15 @@ function Companies() {
       </Row>
       <br />
 
-      <Row>
-        <p className="content1">Join the Enterprise Escalator and take your company all the way!</p>
+
+      <Row className={clsx("centerCompany", 'fontType')}>
+        <h5>Join the Enterprise Escalator and take your company all the way!</h5>
       </Row>
+      <br />
+      <br />
 
 
-      <Row className="centerCompany">
+      <Row className={clsx("centerCompany", 'fontType')}>
         <Col>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <IconContext.Provider value={{ color: "#277C93", size: "40px" }}>
@@ -190,7 +197,8 @@ function Companies() {
       </Row>
       <br />
       <br />
-      <Row className="centerCompany">
+
+      <Row className={clsx("centerCompany", 'fontType')}>
         <Col>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <IconContext.Provider value={{ color: "#277C93", size: "40px" }}>
@@ -228,7 +236,7 @@ function Companies() {
       <br />
       <br />
 
-      <Row className="centerCompany">
+      <Row className={clsx("centerCompany", 'fontType')}>
         <Col>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <IconContext.Provider value={{ color: "#277C93", size: "40px" }}>
@@ -274,7 +282,7 @@ function Companies() {
       </Row>
       <br />
       <br />
-      <Row className="justify-content-md-center">
+      <Row className={clsx("justify-content-md-center", 'fontType')}>
         <Col xs={2}>
           <h2>Our Criteria</h2>
         </Col>
@@ -282,33 +290,33 @@ function Companies() {
       <br />
       <br />
 
-      <Row className="centerCompany">
+      <Row className={clsx("centerCompany", 'fontType', 'fontBlue')}>
         <Col>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <IconContext.Provider value={{ color: "#277C93", size: "40px" }}>
+            <IconContext.Provider value={{ color: "#808080", size: "40px" }}>
               <FaGlobeAfrica />
             </IconContext.Provider>
           </div>
           <br />
-          <h2>Africa Focussed</h2>
+          <h3>Africa Focussed</h3>
         </Col>
         <Col>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <IconContext.Provider value={{ color: "#277C93", size: "40px" }}>
+            <IconContext.Provider value={{ color: "#808080", size: "40px" }}>
               <IoIosInfinite />
             </IconContext.Provider>
           </div>
           <br />
-          <h2>Stage & Sector Agnostic</h2>
+          <h3>Stage & Sector Agnostic</h3>
         </Col>
         <Col>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <IconContext.Provider value={{ color: "#277C93", size: "40px" }}>
+            <IconContext.Provider value={{ color: "#808080", size: "40px" }}>
               <GiLotus />
             </IconContext.Provider>
           </div>
           <br />
-          <h2>Positively Impactful</h2>
+          <h3>Positively Impactful</h3>
         </Col>
       </Row>
       <br />
@@ -320,7 +328,7 @@ function Companies() {
         </Col>
       </Row>
       <br />
-      <Row className="center">
+      <Row className={clsx("center", 'fontType')}>
         <Col>
           <Button variant="outline-primary" onClick={open}>Contact Us</Button>
         </Col>
