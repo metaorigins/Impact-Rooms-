@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo');
+
 .photoFooter {
     width: 65%;
   }
@@ -19,5 +21,14 @@
 
   a.linkdin {
     padding-right: 10px;
+  }
+
+  .buttonStyleFooter{
+    margin-left: 15px;
+    margin-top: 20px;
+  }
+
+  .fontType2{
+    font-family: 'Heebo'
   }
 

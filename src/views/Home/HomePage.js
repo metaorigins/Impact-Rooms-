@@ -41,7 +41,7 @@ function HomePage() {
                 <div className={clsx("text-on-image", 'fontType')}>
                     <Typewriter
                         options={{
-                            strings: ['Prepare. Grow. Succeed'],
+                            strings: ['Prepare. Grow. Succeed.'],
                             autoStart: true,
                             loop: true,
                         }}

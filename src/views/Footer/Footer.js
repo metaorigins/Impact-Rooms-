@@ -15,8 +15,8 @@ const Footer = () => {
     return (
         <Box>
             <Container>
-                <Row>
-                    <Col xs={4}>
+                <Row className='fontType2'>
+                    <Col md={4}>
                         <Nav.Link href="/"><Image src={logo} className="photoFooter"></Image></Nav.Link>
                         <br />
                         <Form.Control type="name" placeholder="Type & Hit Enter..." />
@@ -43,13 +43,15 @@ const Footer = () => {
                             <FontAwesomeIcon icon={faInstagram} size="2x" />
                         </a>
                     </Col>
-                    <Col xs={5}></Col>
+                    <Col></Col>
+                    <Col></Col>
+                    <Col></Col>
                     <Col>
                         <Nav.Link href="/">Home</Nav.Link>
                         <Nav.Link href="/Companies">Company</Nav.Link>
                         <Nav.Link href="/Investors">Investors</Nav.Link>
                         <Nav.Link href="/AboutUs">About Us</Nav.Link>
-                        <Button variant="primary">Sign In</Button>
+                        <Button variant="info" className='buttonStyleFooter'>Sign In</Button>
                     </Col>
                 </Row>
             </Container>

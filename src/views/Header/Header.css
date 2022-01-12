@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo');
+
 .navbar-default {
   height: 100px;
 }
@@ -6,4 +8,12 @@
     width: 300px;
     height: 75px;
     padding-top: 5px;
+  }
+
+  .fontType2{
+    font-family: 'Heebo'
+  }
+
+  .buttonStyleHeader{
+    margin-left: 20px;
   }
