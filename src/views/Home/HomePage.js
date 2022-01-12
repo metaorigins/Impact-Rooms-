@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination } from 'swiper';
 import Typewriter from "typewriter-effect";
 import { IconContext } from "react-icons";
-import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill} from "react-icons/bs";
+import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from "react-icons/bs";
 import vr from '../../assets/vr.jpg';
 import aws from '../../assets/homePage/AWS.jpeg';
 import gbv from "../../assets/homePage/gbv.jpeg";
@@ -48,23 +48,23 @@ function HomePage() {
                 </div>
                 <h2 className="text-on-image2">Enterprise Escalator</h2>
             </Row>
-            <Image src={vr} className={clsx("photo")}/>
-       
+            <Image src={vr} className={clsx("photo")} />
+
 
             <Row className="mx-auto my-4">
                 <Col>
                     <ColoredLine color="#277C93" />
                     <br />
                     <br />
-                    <h4 className="center">Enabling African entrepreneurship at scale  through technology, data and collaboration.</h4>
+                    <h5 className={clsx("center", "fontType")}>Enabling African entrepreneurship at scale  through technology, data and collaboration.</h5>
                     <br />
                     <br />
                     <br />
                     <ColoredLine color="#277C93" />
                 </Col>
                 <Col>
-                    <Card border="primary" className={clsx("center", "shadow-lg")}>
-                        <Card.Header><Card.Title>Create Your FREE Company Dashboard</Card.Title></Card.Header>
+                    <Card border="primary" className={clsx("center", "shadow-lg", "fontType")}>
+                        <Card.Header><Card.Title><h4>Create Your FREE Company Dashboard</h4></Card.Title></Card.Header>
                         <Card.Body>
                             <br />
                             <Button variant="primary" size="lg">Let's Get Started</Button>
@@ -82,43 +82,43 @@ function HomePage() {
 
             <Row className="mx-auto my-4">
                 <Col>
-                    <Card className={clsx("center", "shadow-lg")}>
-                        <br/>
+                    <Card className={clsx("center", "shadow-lg", "fontType")}>
+                        <br />
                         <Card.Body>
                             <IconContext.Provider value={{ color: "#277C93", size: "50px" }}>
-                                <BsFillArrowLeftCircleFill/>
+                                <BsFillArrowLeftCircleFill />
                             </IconContext.Provider>
-                            <br/>
-                            <br/>
+                            <br />
+                            <br />
                             <Card.Title><Nav.Link href="/Investors"><h2>Investors</h2></Nav.Link></Card.Title>
                             <br />
                             <ColoredLine color="#277C93" />
-                            <br/>
+                            <br />
                             <Card.Text>
-                            <h5>Accredited and institutional investors interested <br/> or active in Africa</h5>
+                                <h5>Accredited and institutional investors interested <br /> or active in Africa</h5>
                             </Card.Text>
-                            <br/>
+                            <br />
                             <ColoredLine color="#277C93" />
                         </Card.Body>
                     </Card>
                 </Col>
                 <Col>
-                    <Card className={clsx("center", "shadow-lg")}>
-                        <br/>
+                    <Card className={clsx("center", "shadow-lg", "fontType")}>
+                        <br />
                         <Card.Body>
-                        <IconContext.Provider value={{ color: "#277C93", size: "50px" }}>
-                                <BsFillArrowRightCircleFill/>
+                            <IconContext.Provider value={{ color: "#277C93", size: "50px" }}>
+                                <BsFillArrowRightCircleFill />
                             </IconContext.Provider>
-                            <br/>
-                            <br/>
+                            <br />
+                            <br />
                             <Card.Title> <Nav.Link href="/Companies"><h2>Companies</h2></Nav.Link></Card.Title>
                             <br />
                             <ColoredLine color="#277C93" />
-                            <br/>
+                            <br />
                             <Card.Text>
                                 <h5>Africa focussed enterprises at any stage looking to grow or raise investment</h5>
                             </Card.Text>
-                            <br/>
+                            <br />
                             <ColoredLine color="#277C93" />
                         </Card.Body>
                     </Card>
@@ -129,42 +129,49 @@ function HomePage() {
             <Row className="justify-content-md-center">
                 <Col>
                     <Swiper grabCursor={true} loop={true} height={100} slidesPerView={2} spaceBetween={30} pagination={{
-                    }} className="align-middle">
+                    }} className={clsx("align-middle", "fontType")}>
                         <SwiperSlide>
                             <Image className="swiper-image" src={aws} roundedCircle={true} />
                             <br />
                             <br />
-                            Impact Rooms partners with AWS to bring infrastructure, resources and access to African start ups.	Announcement December 2021
+                            Impact Rooms partners with AWS to bring infrastructure, resources and access to African start ups.
+                            <br />
+                            <p className="fontBlue">Announcement - December 2021</p>
                         </SwiperSlide>
                         <SwiperSlide>
                             <Image className="swiper-image" src={gbv} roundedCircle={true} />
                             <br />
                             <br />
-                            Impact Rooms raises seven-digit growth capital from US based investment group - Global Blockchain Ventures AnnouncementDecember 2021
+                            Impact Rooms raises seven-digit growth capital from US based investment group - Global Blockchain Ventures
+                            <p className="fontBlue">Announcement - December 2021</p>
                         </SwiperSlide>
                         <SwiperSlide>
                             <Image className="swiper-image" src={shortlist} roundedCircle={true} />
                             <br />
                             <br />
-                            Impact Rooms partners with renowned recruitment and executive search firm - Shortlist - to bring top-talent to African start ups. AnnouncementNovember 2021
+                            Impact Rooms partners with renowned recruitment and executive search firm - Shortlist - to bring top-talent to African start ups. 
+                            <p className="fontBlue">Announcement - November 2021</p>
                         </SwiperSlide>
                         <SwiperSlide>
                             <Image className="swiper-image" src={picture8} roundedCircle={true} />
                             <br />
                             <br />
-                            Impact Rooms announces Barry Palte as company Chairperson - bringing world-class investment experience to the team AnnouncementDecember 2021
+                            Impact Rooms announces Barry Palte as company Chairperson - bringing world-class investment experience to the team.
+                            <p className="fontBlue">Announcement - December 2021</p>
                         </SwiperSlide>
                         <SwiperSlide>
                             <Image className="swiper-image" src={nexus} roundedCircle={true} />
                             <br />
                             <br />
-                            Impact Rooms partners with Germany based, Impact Nexus, to evaluate, score and forecast the impact of companies AnnouncementNovember 2021
+                            Impact Rooms partners with Germany based, Impact Nexus, to evaluate, score and forecast the impact of companies.
+                               <p className="fontBlue">Announcement - November 2021</p>
                         </SwiperSlide>
                         <SwiperSlide>
                             <Image className="swiper-image" src={innovesta} roundedCircle={true} />
                             <br />
                             <br />
-                            Impact Rooms partners with Israeli based, Innovesta, to bring clients real-time market updates and sentiment AnnouncementDecember 2021
+                            Impact Rooms partners with Israeli based, Innovesta, to bring clients real-time market updates and sentiment.
+                            <p className="fontBlue">Announcement - December 2021</p>
                         </SwiperSlide>
                     </Swiper>
                 </Col>
@@ -181,7 +188,7 @@ function HomePage() {
             <br />
             <Row className="justify-content-md-center">
                 <Col>
-                    <h2 className="center">Prepare. Grow. Succeed.</h2>
+                    <h2 className={clsx("center", "fontType")}>Prepare. Grow. Succeed.</h2>
                 </Col>
             </Row>
             <br />
@@ -190,7 +197,7 @@ function HomePage() {
                     <ColoredLine color="#277C93" />
                 </Col>
             </Row>
-            <br/>
+            <br />
 
         </Container>
     )

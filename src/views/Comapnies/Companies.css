@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 .photoCompanyMan {
     width: 100vw;
     height: 30vh;
@@ -65,4 +67,16 @@
   
   .center {
     text-align: center;
+  }
+
+  .fontType{
+    font-family: 'Montserrat'
+  }
+  
+  .boldFont{
+    font-weight: bold;
+  }
+  
+  .fontBlue{
+    color: #277b93;
   }

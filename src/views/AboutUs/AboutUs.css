@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 .photoCompany {
     width: 100vw;
     height: 50vh;
@@ -50,5 +52,9 @@
   text-align: center;
   padding-right: 55px;
 
+}
+
+.font{
+  font-family: 'Montserrat'
 }
 

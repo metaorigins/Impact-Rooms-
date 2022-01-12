@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 .photo {
     width: 101.5vw;
@@ -51,6 +52,18 @@
 
 .center {
   text-align: center;
+}
+
+.fontType{
+  font-family: 'Montserrat'
+}
+
+.boldFont{
+  font-weight: bold;
+}
+
+.fontBlue{
+  color: #277b93;
 }
 
 /* @media only screen and (max-width: 770px) {
