@@ -63,11 +63,8 @@
   color: #277b93;
 }
 
-.ratio-container {
-    position: relative;
-    height: 0;
-    width: 100%;
-    padding-bottom: 50%;
+.paddingLeft{
+  margin-right: 180px;
 }
 
 

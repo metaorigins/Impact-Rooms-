@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Navbar, Nav, Container, Button, Image } from 'react-bootstrap';
 import logo from '../../assets/Asset 1.png';
 import './Header.css'

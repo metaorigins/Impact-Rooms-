@@ -1,10 +1,11 @@
 import React from 'react';
-import { Container, Image, Row, Col, Button, Carousel, Card, Form } from 'react-bootstrap';
+import { Container, Image, Row, Col, Button } from 'react-bootstrap';
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination } from 'swiper';
+import { PopupButton } from '@typeform/embed-react';
 import { GiAtom, GiMagnifyingGlass, GiTrophyCup, GiDeerTrack, GiSmart, GiLotus } from 'react-icons/gi';
 import { FaPuzzlePiece, FaCogs, FaGlobeAfrica } from 'react-icons/fa';
-import { RiShieldStarFill, RiHeartPulseFill, RiZoomInFill } from 'react-icons/ri';
+import { RiShieldStarFill, RiHeartPulseFill } from 'react-icons/ri';
 import { IoIosInfinite } from 'react-icons/io';
 import { IconContext } from "react-icons";
 import companyMan from '../../assets/companyMan.jpg';
@@ -41,7 +42,7 @@ function Companies() {
   return (
     <Container fluid className="p-0">
       <Row>
-        <h1 className={clsx("text-on-imageCompany",'fontType')}>Welcome, Companies.</h1>
+        <h1 className={clsx("text-on-imageCompany", 'fontType')}>Welcome, Companies.</h1>
       </Row>
       <Image src={companyMan} className="photoCompanyMan"></Image>
       <Row>
@@ -51,7 +52,9 @@ function Companies() {
         </Col>
         <Col className="center">
           <p className={clsx('content1', 'fontType')}>Create your FREE company dashboard</p>
-          <Button variant="primary">Let's Get Started</Button>
+          <PopupButton id="pTsv18tb" style={{ fontSize: 20 }} className="button">
+            Let's get Started
+          </PopupButton>
           <br />
           <br />
           <Row className="justify-content-md-center">

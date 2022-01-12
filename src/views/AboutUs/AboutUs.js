@@ -236,7 +236,7 @@ function AboutUs() {
       </Row>
 
       <Row>
-        <Col>
+        <Col className='paddingLeft'>
           <ComposableMap>
             <Geographies geography={geoUrl} fill='#277C93'>
               {({ geographies }) =>

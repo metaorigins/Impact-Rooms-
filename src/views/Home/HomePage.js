@@ -1,7 +1,8 @@
 import React from 'react';
-import { Container, Image, Row, Col, Card, Button, Nav, Carousel } from 'react-bootstrap';
+import { Container, Image, Row, Col, Card, Nav } from 'react-bootstrap';
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination } from 'swiper';
+import { PopupButton } from '@typeform/embed-react';
 import Typewriter from "typewriter-effect";
 import { IconContext } from "react-icons";
 import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from "react-icons/bs";
@@ -37,7 +38,7 @@ function HomePage() {
     return (
         <Container fluid className="p-0">
             <Row>
-                <div className={clsx("text-on-image",'fontType')}>
+                <div className={clsx("text-on-image", 'fontType')}>
                     <Typewriter
                         options={{
                             strings: ['Prepare. Grow. Succeed'],
@@ -46,7 +47,7 @@ function HomePage() {
                         }}
                     />
                 </div>
-                <h2 className={clsx("text-on-image2",'fontType')}>Enterprise Escalator</h2>
+                <h2 className={clsx("text-on-image2", 'fontType')}>Enterprise Escalator</h2>
             </Row>
             <Image src={vr} className={clsx("photo")} />
 
@@ -67,7 +68,9 @@ function HomePage() {
                         <Card.Header><Card.Title><b>Create Your FREE Company Dashboard</b></Card.Title></Card.Header>
                         <Card.Body>
                             <br />
-                            <Button variant="primary" size="lg">Let's Get Started</Button>
+                            <PopupButton id="pTsv18tb" style={{ fontSize: 20 }} className="button">
+                                Let's get Started
+                            </PopupButton>
                             <br />
                             <br />
                             <br />
@@ -143,15 +146,15 @@ function HomePage() {
                             <br />
                             <br />
                             Impact Rooms raises seven-digit growth capital from US based investment group - Global Blockchain Ventures
-                            <br/>
+                            <br />
                             <b className="fontBlue">Announcement - December 2021</b>
                         </SwiperSlide>
                         <SwiperSlide>
                             <Image className="swiper-image" src={shortlist} roundedCircle={true} />
                             <br />
                             <br />
-                            Impact Rooms partners with renowned recruitment and executive search firm - Shortlist - to bring top-talent to African start ups. 
-                            <br/>
+                            Impact Rooms partners with renowned recruitment and executive search firm - Shortlist - to bring top-talent to African start ups.
+                            <br />
                             <b className="fontBlue">Announcement - November 2021</b>
                         </SwiperSlide>
                         <SwiperSlide>
@@ -159,7 +162,7 @@ function HomePage() {
                             <br />
                             <br />
                             Impact Rooms announces Barry Palte as company Chairperson - bringing world-class investment experience to the team.
-                            <br/>
+                            <br />
                             <b className="fontBlue">Announcement - December 2021</b>
                         </SwiperSlide>
                         <SwiperSlide>
@@ -167,15 +170,15 @@ function HomePage() {
                             <br />
                             <br />
                             Impact Rooms partners with Germany based, Impact Nexus, to evaluate, score and forecast the impact of companies.
-                            <br/>
-                               <b className="fontBlue">Announcement - November 2021</b>
+                            <br />
+                            <b className="fontBlue">Announcement - November 2021</b>
                         </SwiperSlide>
                         <SwiperSlide>
                             <Image className="swiper-image" src={innovesta} roundedCircle={true} />
                             <br />
                             <br />
                             Impact Rooms partners with Israeli based, Innovesta, to bring clients real-time market updates and sentiment.
-                            <br/>
+                            <br />
                             <b className="fontBlue">Announcement - December 2021</b>
                         </SwiperSlide>
                     </Swiper>

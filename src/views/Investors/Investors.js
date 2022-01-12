@@ -1,5 +1,6 @@
 import React from 'react';
-import { Container, Image, Row, Col, Button, Carousel, Card, Form, Accordion } from 'react-bootstrap';
+import { Container, Image, Row, Col, Button, Card, Accordion } from 'react-bootstrap';
+import { Widget } from '@typeform/embed-react';
 import { IconContext } from "react-icons";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import { GiDeerTrack, GiSmart, GiMagnifyingGlass, GiAtom, GiStairsGoal } from "react-icons/gi";
@@ -34,30 +35,7 @@ function Investors() {
       <Image src={companyMan} className="photoCompanyMan"></Image>
       <Row>
         <Col>
-          <Card border="primary" className={clsx("center", "shadow-lg", 'fontType')}>
-            <Card.Body>
-              <Card.Title><Image src={wave} className="photoWave" /></Card.Title>
-              <br />
-              <Card.Text>
-                Hi, my name is Esgie.
-                <br />
-                <br />
-                I am your platform host.
-                <br />
-                <br />
-                Let's get you registered.
-              </Card.Text>
-              <br />
-            </Card.Body>
-            <Card.Footer>
-              <IconContext.Provider value={{ color: "#277C93", size: "15px" }}>
-                <BsFillStopwatchFill />
-              </IconContext.Provider>
-              Takes 4 mins
-              <br />
-              <Button variant="primary">Start</Button>
-            </Card.Footer>
-          </Card>
+            <Widget id="pTsv18tb" style={{ width: '100%', height: '180%' }} className="my-form" />
         </Col>
         <Col className={clsx('fontType', 'center', 'paddingTop')}>
           <Row className="justify-content-md-center">
@@ -82,6 +60,17 @@ function Investors() {
       <br />
       <br />
       <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+    
+
 
       <Row className="justify-content-md-center">
         <Col className={clsx("center", 'fontType')}>

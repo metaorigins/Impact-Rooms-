@@ -79,3 +79,19 @@
   .fontBlue{
     color: #277b93;
   }
+
+  .button {
+    position: relative;
+    background-color: #277C93;
+    border: none;
+    font-size: 28px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 400px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+  }
