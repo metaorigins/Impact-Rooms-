@@ -37,7 +37,7 @@ function HomePage() {
     return (
         <Container fluid className="p-0">
             <Row>
-                <div className="text-on-image">
+                <div className={clsx("text-on-image",'fontType')}>
                     <Typewriter
                         options={{
                             strings: ['Prepare. Grow. Succeed'],
@@ -46,7 +46,7 @@ function HomePage() {
                         }}
                     />
                 </div>
-                <h2 className="text-on-image2">Enterprise Escalator</h2>
+                <h2 className={clsx("text-on-image2",'fontType')}>Enterprise Escalator</h2>
             </Row>
             <Image src={vr} className={clsx("photo")} />
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Container, Image, Row, Col, Button, Card, Modal } from 'react-bootstrap';
+import { Container, Image, Row, Col, Button, Card, Modal, Tooltip, OverlayTrigger } from 'react-bootstrap';
+import { ComposableMap, Geographies, Geography, Marker } from "react-simple-maps";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import companyLady from "../../assets/AboutUs/aboutUsMain.jpg";
@@ -22,7 +23,6 @@ import inclusive from "../../assets/AboutUs/3-6.png";
 import impact from "../../assets/AboutUs/4-6.png";
 import innovate from "../../assets/AboutUs/5-5.png";
 import collab from "../../assets/AboutUs/6-5.png";
-import map from "../../assets/map.svg"
 import clsx from "clsx";
 import './AboutUs.css';
 
@@ -38,6 +38,8 @@ function AboutUs() {
   const [show9, setShow9] = useState(false);
   const [show10, setShow10] = useState(false);
   const [show11, setShow11] = useState(false);
+  const [marker, setMarker] = useState('#F53');
+  const [content, setContent] = useState('');
 
 
   const handleClose = () => {
@@ -118,10 +120,86 @@ function AboutUs() {
     window.open('mailto:info@impactrooms.com?subject=Subject')
   }
 
+  const geoUrl =
+    "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
+
+
+  const marker1 = () => {
+    setMarker('#FFFFFF');
+    setContent('Oliver Blantern, United Kingdom');
+  };
+
+  const marker2 = () => {
+    setMarker('#FFFFFF');
+    setContent('Alex Cahana, USA');
+  };
+
+  const marker3 = () => {
+    setMarker('#FFFFFF');
+    setContent('Inonge Margaret Imasiku, Zambia');
+  };
+
+  const marker4 = () => {
+    setMarker('#FFFFFF');
+    setContent('Barry Palte, Australia');
+  };
+
+  const marker5 = () => {
+    setMarker('#FFFFFF');
+    setContent('Oliver Krantz, RSA');
+  };
+
+  const marker6 = () => {
+    setMarker('#FFFFFF');
+    setContent('Russel Ayugi, Kenya');
+  };
+
+  const marker7 = () => {
+    setMarker('#FFFFFF');
+    setContent('Carol Muchemi, Kenya');
+  };
+
+  const marker8 = () => {
+    setMarker('#FFFFFF');
+    setContent('Cristine Baker, Switzerland');
+  };
+
+  const marker9 = () => {
+    setMarker('#FFFFFF');
+    setContent('Claire Matuka, Kenya');
+  };
+
+  const marker10 = () => {
+    setMarker('#FFFFFF');
+    setContent('Bedie Moran, USA');
+  };
+
+  const marker11 = () => {
+    setMarker('#FFFFFF');
+    setContent('Lauren Cascio, Puerta Rico');
+  };
+
+  const marker12 = () => {
+    setMarker('#FFFFFF');
+    setContent('Emelia Asante Yeboah, Ghana');
+  };
+
+
+  const leaveMouse = () => {
+    setMarker('#F53');
+  };
+
+  const renderTooltip = (props) => (
+    <Tooltip id="button-tooltip" {...props}>
+      {content}
+    </Tooltip>
+  );
+
+
   return (
     <Container fluid className="p-0">
       <Row>
-        <h1 className="text-on-image">About Us</h1>
+        <h1 className={clsx("text-on-image", 'fontType')}>About Us</h1>
       </Row>
       <Image src={companyLady} className="photoCompany"></Image>
       <br />
@@ -131,9 +209,10 @@ function AboutUs() {
           <ColoredLine color="#277C93" />
         </Col>
       </Row>
+      <br />
 
 
-      <Row className="center">
+      <Row className={clsx("center", 'fontType')}>
         <Col>
           <h2>Our Team</h2>
         </Col>
@@ -141,13 +220,13 @@ function AboutUs() {
       <br />
 
 
-      <Row className='center'>
+      <Row className={clsx('center', 'fontType')}>
         <Col>
           <p>A highly experienced and diverse team across specialisms, gender, age and geography, who each share a deep passion and knowledge for Africa</p>
         </Col>
       </Row>
-      <br/>
-      <br/>
+      <br />
+      <br />
 
 
       <Row className="justify-content-md-center">
@@ -155,18 +234,32 @@ function AboutUs() {
           <ColoredLine color="#277C93" />
         </Col>
       </Row>
-      <br />
-      <br/>
 
       <Row>
         <Col>
-        <Image src={map} className="photoMap"/>
+          <ComposableMap>
+            <Geographies geography={geoUrl} fill='#277C93'>
+              {({ geographies }) =>
+                geographies.map(geo => <Geography key={geo.rsmKey} geography={geo} />)
+              }
+            </Geographies>
+
+            <Marker coordinates={[-0.118092, 51.509865]} onMouseEnter={marker1} onMouseLeave={leaveMouse}>
+              <OverlayTrigger
+                placement="right"
+                delay={{ show: 250, hide: 400 }}
+                overlay={renderTooltip}
+              >
+                <circle r={5} fill={marker} />
+              </OverlayTrigger>
+            </Marker>
+          </ComposableMap>
         </Col>
       </Row>
-      <br/>
+      <br />
 
 
-      <Row className="mx-auto my-4">
+      <Row className={clsx("mx-auto my-4", 'fontType')}>
         <Col>
           <Card fluid className="p-0" className={clsx("center", "shadow-lg",)} >
             <Card.Img variant="top" src={OliCard} />
@@ -311,7 +404,7 @@ function AboutUs() {
       </Row>
 
 
-      <Row className="mx-auto my-4">
+      <Row className={clsx("mx-auto my-4", 'fontType')}>
         <Col>
           <Card fluid className="p-0" className={clsx("center", "shadow-lg",)} >
             <Card.Img variant="top" src={Oliver} />
@@ -460,7 +553,7 @@ function AboutUs() {
       </Row>
 
 
-      <Row className="mx-auto my-4">
+      <Row className={clsx("mx-auto my-4", 'fontType')}>
         <Col>
           <Card fluid className={clsx("center", "shadow-lg",)} >
             <Card.Img variant="top" src={Claire} />
@@ -588,14 +681,15 @@ function AboutUs() {
         </Col>
       </Row>
       <br />
+      <br />
 
 
-      <Row>
+      <Row className='fontType'>
         <Col>
           <h2>Our Story</h2>
           Impact Rooms was founded on a simple mission – to provide African start-ups with the skills, knowledge and access to capital required to succeed.
           <br />
-          <br/>
+          <br />
           Having watched Africa’s investment, technology and impact market explode over the last 5 -years, Impact Rooms’ Founder – Oliver Blantern – recognised that exponential market growth will come with new challenges, expectations and
         </Col>
         <Col>
@@ -606,25 +700,25 @@ function AboutUs() {
       <br />
 
 
-      <Row className="center">
+      <Row className={clsx("center", 'fontType')}>
         <Col>
           <Button variant="outline-primary" onClick={open}>GET IN TOUCH</Button>
         </Col>
       </Row>
       <br />
       <br />
+      <br />
 
 
-      <Row className="center">
+      <Row className={clsx("center", 'fontType')}>
         <Col>
           <h1>Our Values</h1>
         </Col>
       </Row>
       <br />
-      <br />
 
 
-      <Row className="mx-auto my-4">
+      <Row xs={4} className={clsx("mx-auto my-4", 'fontType', 'justify-content-md-center')}>
         <Col>
           <Card fluid className="p-0">
             <Card.Img variant="top" src={acess} />
@@ -652,7 +746,7 @@ function AboutUs() {
       </Row>
 
 
-      <Row className="mx-auto my-4">
+      <Row xs={4} className={clsx("mx-auto my-4", 'fontType', 'justify-content-md-center')}>
         <Col>
           <Card fluid className="p-0">
             <Card.Img variant="top" src={impact} />
@@ -681,20 +775,20 @@ function AboutUs() {
       <br />
 
 
-      <Row className="justify-content-md-center">
+      <Row xs={4} className={clsx("mx-auto my-4", 'fontType', 'justify-content-md-center')}>
         <Col>
           <h2 className="center">Service Disclaimer</h2>
         </Col>
       </Row>
 
-      <Row className="justify-content-md-center">
+      <Row className={clsx("justify-content-md-center", 'fontType')}>
         <Col>
           <p className="serviceText">
             Impact Rooms provides company guidance for growth consulting, C-suite advice and company strategy, strategic landscape assessment, competitive analysis, legal and regulatory assessment and guidance, intellectual property evaluation, and other essential and valuable advice and guidance based upon the team’s decades-worth of combined expertise. Impact Rooms does not provide investment advice, financial advice or engage investors beyond startup introductions, nor does it take responsibility for, nor guarantee against losses, nor promise success. We aim to give the best guidance we can, given transparency and under conditions of uncertainty. We advise only private companies, not publicly traded, and work within the regulatory principles of each of the countries in which our clients do business, seeking legal expertise in each of those jurisdictions.
           </p>
         </Col>
       </Row>
-      <br/>
+      <br />
 
     </Container>
   );

@@ -41,7 +41,7 @@ function Companies() {
   return (
     <Container fluid className="p-0">
       <Row>
-        <h1 className="text-on-imageCompany">Welcome, Companies.</h1>
+        <h1 className={clsx("text-on-imageCompany",'fontType')}>Welcome, Companies.</h1>
       </Row>
       <Image src={companyMan} className="photoCompanyMan"></Image>
       <Row>
