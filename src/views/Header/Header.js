@@ -17,7 +17,7 @@ function Header() {
                         <Nav.Link href="/Companies">Companies</Nav.Link>
                         <Nav.Link href="/Investors">Investors</Nav.Link>
                         <Nav.Link href="/AboutUs">About Us</Nav.Link>
-                        <Button variant="info" className='buttonStyleHeader'>Sign In</Button>
+                        <Button href="/SignIn" variant="info" className='buttonStyleHeader'>Sign In</Button>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

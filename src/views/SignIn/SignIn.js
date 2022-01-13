@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Form, Button, Container } from 'react-bootstrap';
+import { BsFillFileLock2Fill } from "react-icons/bs";
+import { IconContext } from "react-icons";
 import './SignIn.css'
 import clsx from 'clsx';
 
@@ -29,8 +31,13 @@ function SignIn(props) {
 
     return (
         <Container>
-            <h2 className='mainTitle'>Sign Up</h2>
-            <Form className={clsx('formContainer','formContent')}>
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <IconContext.Provider value={{ color: "#9400D3", size: "60px" }}>
+                    <BsFillFileLock2Fill />
+                </IconContext.Provider>
+            </div>
+            <h2 className='mainTitle'>Sign In</h2>
+            <Form className={clsx('formContainer', 'formContent')}>
                 <br />
                 <Form.Group controlId="FormEmail">
                     <Form.Label>Enter Email</Form.Label>
@@ -42,7 +49,9 @@ function SignIn(props) {
                     <Form.Control type='password' placeholder='Enter Password' onChange={(e) => setPassword(e.target.value)} />
                 </Form.Group>
                 <br></br>
-                <Button variant='primary' type='submit' onClick={(e) => submit(e)}>Submit</Button>
+                <div className="d-grid gap-2">
+                    <Button variant='primary' type='submit' onClick={(e) => submit(e)}>Sign In</Button>
+                </div>
             </Form>
         </Container>
     )

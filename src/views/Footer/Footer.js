@@ -51,7 +51,7 @@ const Footer = () => {
                         <Nav.Link href="/Companies">Company</Nav.Link>
                         <Nav.Link href="/Investors">Investors</Nav.Link>
                         <Nav.Link href="/AboutUs">About Us</Nav.Link>
-                        <Button variant="info" className='buttonStyleFooter'>Sign In</Button>
+                        <Button href="/SignIn" variant="info" className='buttonStyleFooter'>Sign In</Button>
                     </Col>
                 </Row>
             </Container>

@@ -22,6 +22,7 @@ function App() {
         <Route exact path="/Companies" element={<Companies />} />
         <Route exact path="/Investors" element={<Investors/>} />
         <Route exact path="/AboutUs" element={<AboutUs />} />
+        <Route exact path="/SignIn" element={<SignIn/>}/>
       </Routes>
       <Footer />
     </BrowserRouter>

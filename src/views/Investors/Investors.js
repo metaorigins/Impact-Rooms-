@@ -30,7 +30,7 @@ function Investors() {
 
   return (
     <Container fluid className="p-0">
-      <Helmet>
+          <Helmet>
         <title>Investors</title>
       </Helmet>
       <Row className="fontType">
@@ -39,7 +39,7 @@ function Investors() {
       <Image src={companyMan} className="photoCompanyMan"></Image>
       <Row>
         <Col>
-          <Widget id="pTsv18tb" style={{ width: '100%', height: '180%' }} className="my-form" />
+            <Widget id="pTsv18tb" style={{ width: '100%', height: '180%' }} className="my-form" />
         </Col>
         <Col className={clsx('fontType', 'center', 'paddingTop')}>
           <Row className="justify-content-md-center">
@@ -73,7 +73,7 @@ function Investors() {
       <br />
       <br />
       <br />
-
+    
 
 
       <Row className="justify-content-md-center">
