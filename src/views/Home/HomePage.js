@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination } from 'swiper';
 import { PopupButton } from '@typeform/embed-react';
 import Typewriter from "typewriter-effect";
+import { Helmet } from "react-helmet";
 import { IconContext } from "react-icons";
 import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from "react-icons/bs";
 import vr from '../../assets/vr.jpg';
@@ -37,6 +38,9 @@ function HomePage() {
 
     return (
         <Container fluid className="p-0">
+            <Helmet>
+                <title>Home</title>
+            </Helmet>
             <Row>
                 <div className={clsx("text-on-image", 'fontType')}>
                     <Typewriter

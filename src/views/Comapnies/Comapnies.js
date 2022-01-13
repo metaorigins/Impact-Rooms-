@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Image, Row, Col, Button } from 'react-bootstrap';
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination } from 'swiper';
+import { Helmet } from "react-helmet";
 import { PopupButton } from '@typeform/embed-react';
 import { GiAtom, GiMagnifyingGlass, GiTrophyCup, GiDeerTrack, GiSmart, GiLotus } from 'react-icons/gi';
 import { FaPuzzlePiece, FaCogs, FaGlobeAfrica } from 'react-icons/fa';
@@ -41,6 +42,9 @@ function Companies() {
 
   return (
     <Container fluid className="p-0">
+      <Helmet>
+        <title>Companies</title>
+      </Helmet>
       <Row>
         <h1 className={clsx("text-on-imageCompany", 'fontType')}>Welcome, Companies.</h1>
       </Row>

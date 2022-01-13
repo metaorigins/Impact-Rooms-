@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Image, Row, Col, Button, Card, Accordion } from 'react-bootstrap';
+import { Helmet } from "react-helmet";
 import { Widget } from '@typeform/embed-react';
 import { IconContext } from "react-icons";
 import { AiOutlineCheckCircle } from "react-icons/ai";
@@ -29,13 +30,16 @@ function Investors() {
 
   return (
     <Container fluid className="p-0">
+      <Helmet>
+        <title>Investors</title>
+      </Helmet>
       <Row className="fontType">
         <h1 className="text-on-imageCompany">Welcome, Investors.</h1>
       </Row>
       <Image src={companyMan} className="photoCompanyMan"></Image>
       <Row>
         <Col>
-            <Widget id="pTsv18tb" style={{ width: '100%', height: '180%' }} className="my-form" />
+          <Widget id="pTsv18tb" style={{ width: '100%', height: '180%' }} className="my-form" />
         </Col>
         <Col className={clsx('fontType', 'center', 'paddingTop')}>
           <Row className="justify-content-md-center">
@@ -69,7 +73,7 @@ function Investors() {
       <br />
       <br />
       <br />
-    
+
 
 
       <Row className="justify-content-md-center">

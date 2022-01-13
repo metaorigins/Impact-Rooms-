@@ -5,6 +5,7 @@ import HomePage from './views/Home/HomePage';
 import Companies from './views/Comapnies/Comapnies';
 import Investors from './views/Investors/Investors';
 import AboutUs from './views/AboutUs/AboutUs';
+import SignIn from './views/SignIn/SignIn';
 import {
   BrowserRouter,
   Routes,

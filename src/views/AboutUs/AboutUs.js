@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Image, Row, Col, Button, Card, Modal, Tooltip, OverlayTrigger } from 'react-bootstrap';
+import { Helmet } from "react-helmet";
 import { ComposableMap, Geographies, Geography, Marker } from "react-simple-maps";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
@@ -198,6 +199,9 @@ function AboutUs() {
 
   return (
     <Container fluid className="p-0">
+      <Helmet>
+        <title>Investors</title>
+      </Helmet>
       <Row>
         <h1 className={clsx("text-on-image", 'fontType')}>About Us</h1>
       </Row>
@@ -225,8 +229,6 @@ function AboutUs() {
           <p>A highly experienced and diverse team across specialisms, gender, age and geography, who each share a deep passion and knowledge for Africa</p>
         </Col>
       </Row>
-      <br />
-      <br />
 
 
       <Row className="justify-content-md-center">
@@ -256,7 +258,6 @@ function AboutUs() {
           </ComposableMap>
         </Col>
       </Row>
-      <br />
 
 
       <Row className={clsx("mx-auto my-4", 'fontType')}>

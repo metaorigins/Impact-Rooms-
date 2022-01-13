@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo');
+
+
+
+.formContainer {
+    width: 500px;
+    height: 500px;
+    margin-left: 400px;
+    margin-top: 30px;
+    box-shadow: 2px;
+    background-color: #52a8c0;
+    border-radius: 5px;
+    padding: 2px; 
+}
+
+.mainTitle{
+    margin-top: 50px;
+    font-family: 'Heebo'
+}
+
+.formContent{
+    padding: 20px;
+    text-align: left;
+    font-family: 'Heebo'
+}
